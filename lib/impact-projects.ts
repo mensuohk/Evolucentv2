@@ -27,10 +27,8 @@ export const COMPLETED_IMPACT_PROJECTS: CompletedImpactProject[] = [
     supporters: 420,
     completedDate: "January 2026",
     auditor: "KPMG Ghana",
-    beforeImage:
-      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1200&auto=format&fit=crop",
-    afterImage:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    beforeImage: "/images/impact/impact-tamale-it-before.png",
+    afterImage: "/images/impact/impact-tamale-it-after.png",
     impact:
       "340 students now have access to working computers and internet for the first time.",
   },
@@ -46,10 +44,8 @@ export const COMPLETED_IMPACT_PROJECTS: CompletedImpactProject[] = [
     supporters: 1840,
     completedDate: "December 2025",
     auditor: "Deloitte Ghana",
-    beforeImage:
-      "https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=1200&auto=format&fit=crop",
-    afterImage:
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop",
+    beforeImage: "/images/impact/impact-kumasi-road-before.png",
+    afterImage: "/images/impact/impact-kumasi-road-after.png",
     impact:
       "22,000 daily users. Truck delivery times cut by 40%. Zero flood disruptions this rainy season.",
   },
@@ -65,10 +61,8 @@ export const COMPLETED_IMPACT_PROJECTS: CompletedImpactProject[] = [
     supporters: 980,
     completedDate: "November 2025",
     auditor: "PwC Ghana",
-    beforeImage:
-      "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=1200&auto=format&fit=crop",
-    afterImage:
-      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=1200&auto=format&fit=crop",
+    beforeImage: "/images/impact/impact-korlebu-water-before.png",
+    afterImage: "/images/impact/impact-korlebu-water-after.png",
     impact:
       "4,200 residents now have clean water access. Waterborne disease cases down 60% in Q4 2025.",
   },

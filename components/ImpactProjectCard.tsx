@@ -1,5 +1,6 @@
 "use client";
 
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import type { CompletedImpactProject } from "@/lib/impact-projects";
 
 export function ImpactProjectCard({
@@ -23,41 +24,12 @@ export function ImpactProjectCard({
         </span>
       </div>
 
-      <div className="relative grid grid-cols-1 md:grid-cols-2">
-        <div className="relative aspect-video overflow-hidden bg-evolucent-sand md:aspect-auto md:min-h-[200px]">
-          {/* eslint-disable-next-line @next/next/no-img-element -- external URLs + onError fallback */}
-          <img
-            src={project.beforeImage}
-            alt={`Before: ${project.title}`}
-            className="size-full object-cover grayscale-[30%]"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
-          />
-          <div className="absolute bottom-3 left-3 rounded-full bg-evolucent-black/75 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-white">
-            Before
-          </div>
-        </div>
-
-        <div className="absolute left-1/2 top-1/2 z-10 hidden size-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-evolucent-sand bg-card text-sm font-bold text-civic-green md:flex">
-          →
-        </div>
-
-        <div className="relative aspect-video overflow-hidden bg-civic-green-light md:aspect-auto md:min-h-[200px]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={project.afterImage}
-            alt={`After: ${project.title}`}
-            className="size-full object-cover"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
-          />
-          <div className="absolute bottom-3 right-3 rounded-full bg-civic-green px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-white">
-            After
-          </div>
-        </div>
-      </div>
+      <BeforeAfterSlider
+        beforeSrc={project.beforeImage}
+        afterSrc={project.afterImage}
+        beforeAlt={`Before: ${project.title}`}
+        afterAlt={`After: ${project.title}`}
+      />
 
       <div className="p-6">
         <h3 className="mb-2.5 font-display text-[22px] font-extrabold tracking-tight text-evolucent-black">
