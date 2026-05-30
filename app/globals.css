@@ -1,0 +1,202 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Evolucent — Civic Futurism tokens */
+:root {
+  --evolucent-gold: #f5a623;
+  --evolucent-gold-light: #fde8b8;
+  --evolucent-gold-dark: #c47f0b;
+  --evolucent-green: #00875a;
+  --evolucent-green-light: #e3f5ee;
+  --evolucent-green-dark: #00593c;
+  --evolucent-black: #0d0d0d;
+  --evolucent-off-white: #f8f6f1;
+  --evolucent-sand: #ede8de;
+  --evolucent-red: #e84040;
+  --evolucent-blue: #1a6bcc;
+  --evolucent-muted: #6b6860;
+  --evolucent-border: #d4cfc4;
+  --evolucent-border-strong: #a8a098;
+
+  --color-primary: var(--evolucent-gold);
+  --color-success: var(--evolucent-green);
+  --color-danger: var(--evolucent-red);
+  --color-info: var(--evolucent-blue);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.06);
+  --shadow-glow-gold: 0 0 0 3px rgba(245, 166, 35, 0.25);
+
+  --background: var(--evolucent-off-white);
+  --foreground: var(--evolucent-black);
+  --card: #ffffff;
+  --card-foreground: var(--evolucent-black);
+  --popover: #ffffff;
+  --popover-foreground: var(--evolucent-black);
+  --primary: var(--evolucent-gold);
+  --primary-foreground: var(--evolucent-black);
+  --secondary: var(--evolucent-sand);
+  --secondary-foreground: var(--evolucent-black);
+  --muted: var(--evolucent-sand);
+  --muted-foreground: var(--evolucent-muted);
+  --accent: var(--evolucent-green);
+  --accent-foreground: #ffffff;
+  --destructive: var(--evolucent-red);
+  --destructive-foreground: #ffffff;
+  --border: var(--evolucent-border);
+  --input: var(--evolucent-border);
+  --ring: var(--evolucent-gold);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: var(--evolucent-black);
+  --foreground: var(--evolucent-off-white);
+  --card: #1a1a18;
+  --card-foreground: var(--evolucent-off-white);
+  --popover: #1a1a18;
+  --popover-foreground: var(--evolucent-off-white);
+  --secondary: #222220;
+  --secondary-foreground: var(--evolucent-off-white);
+  --muted: #222220;
+  --muted-foreground: #a8a49c;
+  --border: #2e2e2a;
+  --input: #2e2e2a;
+}
+
+@keyframes pulse-live {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes slide-in-feed {
+  from {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* Original stack: Geist + Inter (sans), Geist Mono (mono), Roboto (headings/display) */
+  --font-sans: var(--font-geist-sans), var(--font-inter), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-gold: var(--evolucent-gold);
+  --color-gold-light: var(--evolucent-gold-light);
+  --color-gold-dark: var(--evolucent-gold-dark);
+  --color-civic-green: var(--evolucent-green);
+  --color-civic-green-light: var(--evolucent-green-light);
+  --color-civic-green-dark: var(--evolucent-green-dark);
+  --color-evolucent-sand: var(--evolucent-sand);
+  --color-evolucent-black: var(--evolucent-black);
+  --color-evolucent-off-white: var(--evolucent-off-white);
+  --color-info: var(--evolucent-blue);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 1.6);
+  --radius-xl: calc(var(--radius) * 2.4);
+  --radius-2xl: calc(var(--radius) * 2.8);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    /* Adinkra-inspired subtle repeating pattern (Gye Nyame abstraction) */
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 20 C 50 20, 55 30, 40 40 C 25 50, 30 60, 40 60 C 50 60, 55 50, 40 40 C 25 30, 30 20, 40 20 Z M20 40 C 20 50, 30 55, 40 40 C 50 25, 60 30, 60 40 C 60 50, 50 55, 40 40 C 30 25, 20 30, 20 40 Z' fill='none' stroke='%23000000' stroke-width='1.5' stroke-opacity='0.05'/%3E%3Ccircle cx='40' cy='40' r='3' fill='%23000000' fill-opacity='0.04'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-live {
+    animation: pulse-live 2s ease-in-out infinite;
+  }
+  .animate-slide-in-feed {
+    animation: slide-in-feed 0.4s ease-out forwards;
+  }
+  .shadow-evolucent-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-evolucent-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .focus-glow-gold:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-glow-gold);
+  }
+}
+
+/* Funding progress — milestone cap on fill end */
+.progress-fill[data-milestone]::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--evolucent-green);
+  border: 2px solid white;
+  box-shadow: 0 0 0 4px rgba(0, 135, 90, 0.2);
+}
